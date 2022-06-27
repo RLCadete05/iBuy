@@ -1,0 +1,7 @@
+{
+  "name": "iBuy",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "vue"
+}

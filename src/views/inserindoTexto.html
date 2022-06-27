@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <textarea name="" id="texto" cols="30" rows="10">Texto de exemplo</textarea>
+
+    
+</body>
+
+<script>
+    function showSelection(textComponent) {
+    var selectedText;
+    // IE version
+    if (document.selection != undefined) {
+        textComponent.focus();
+        var sel = document.selection.createRange();
+        selectedText = sel.text;
+    }
+    // Mozilla version
+    else if (textComponent.selectionStart != undefined) {
+        var startPos = textComponent.selectionStart;
+        var endPos = textComponent.selectionEnd;
+        selectedText = textComponent.value.substring(startPos, endPos)
+    }
+    return selectedText;
+    }
+
+    var textarea = document.getElementById('texto');
+    textarea.addEventListener('mouseup', function () {
+        var textoSelecionado = showSelection(this);
+        if (textoSelecionado) alert(textoSelecionado);
+    });
+</script>
+</html>

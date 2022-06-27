@@ -1,0 +1,52 @@
+<template>
+    <ion-page>
+        <ion-header>
+            <ion-toolbar>
+                <ion-title>iBuy</ion-title>
+            </ion-toolbar>
+        </ion-header>
+        
+        <ion-content class="background">
+            <ion-img></ion-img>
+            <ion-button router-link= "/InsertItems" color="light" size="default" expand="block" fill="solid" class="LoginButton">Entrar com o Google
+              <ion-icon name="logo-google"></ion-icon>
+            </ion-button>
+        </ion-content>
+    </ion-page>
+</template>
+
+<script>
+    import {  IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonImg, IonButton, IonIcon} from '@ionic/vue';
+    export default {
+      name: 'HomePage', 
+      components: {
+          IonContent,
+          IonHeader, 
+          IonPage, 
+          IonTitle, 
+          IonToolbar,
+          IonImg,
+          IonButton,
+          IonIcon,
+      },
+    };
+</script>
+
+<style>
+  .background{
+    --background: #FFFFFF url('../../public/assets/borders.png') no-repeat center center / cover !important;
+
+  }
+  .LoginButton{
+    /*-moz-animation: ;border: 2px solid #1B4C81;
+    color:#1B4C81;*/
+    bottom: 128px;
+    text-align: center;
+    position: absolute;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    --border-radius: 20px;
+    --border-color: #1B4C81;
+    --border-width: 2px;
+    font-size: 16px;
+  }
+</style>
