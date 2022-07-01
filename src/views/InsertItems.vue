@@ -27,9 +27,7 @@
             enterkeyhint="search"
             placeholder="Escreva sua lista"
           ></ion-input>
-          <ion-button v-if="searchInput != ''" @click="insertItems()" class="outputButton" color="light"
-            >{{searchInput}}</ion-button
-          >
+          <ion-button v-if="searchInput != ''" @click="insertItems()" class="outputButton" color="light">{{searchInput}}</ion-button>
         </ion-list>
         
         <ion-list class="outputUl" v-for="item in myHistory" :key="item">
@@ -38,6 +36,7 @@
             <ion-label>{{ item }}</ion-label>
           </ion-item>
         </ion-list>
+        <ion-button class="save">Salvar</ion-button>
       </div>
     </ion-content>
   </ion-app>
@@ -105,5 +104,15 @@ export default defineComponent({
   .check{
     --background-checked: #6A467F;
     --border-color: #6A467F;
+  }
+  .save{
+    bottom: 128px;
+    text-align: center;
+    position: absolute;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    --border-radius: 20px;
+    --background: #6A467F;
+    --border-width: 2px;
+    font-size: 16px;
   }
 </style>
