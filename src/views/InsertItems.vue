@@ -1,22 +1,12 @@
 <template>
   <ion-app>
     <ion-header translucent>
-      <ion-toolbar>
+      <ion-toolbar class="header">
         <ion-title>iBuy</ion-title>
       </ion-toolbar>
     </ion-header>
 
     <ion-content fullscreen>
-      <!--
-            <ion-searchbar placeholder="Escreva sua lista" class="outputInput" >
-                <ion-icon name="add-outline">
-                    <ion-button color="light">Inserir</ion-button>
-                </ion-icon>
-            </ion-searchbar>
-            
-             
-
-            -->
       <div>
         <ion-list>
           <ion-input
@@ -27,12 +17,12 @@
             enterkeyhint="search"
             placeholder="Escreva sua lista"
           ></ion-input>
-          <ion-button v-if="searchInput != ''" @click="insertItems()" class="outputButton" color="light">{{searchInput}}</ion-button>
+          <ion-button v-if="searchInput != ''" @click="insertItems()" class="outputButton" color="light">{{ searchInput }}</ion-button>
         </ion-list>
         
         <ion-list class="outputUl" v-for="item in myHistory" :key="item">
           <ion-item>
-            <ion-checkbox class="check"></ion-checkbox>
+            <ion-checkbox class="check" checked="true"></ion-checkbox>
             <ion-label>{{ item }}</ion-label>
           </ion-item>
         </ion-list>
@@ -93,8 +83,8 @@ export default defineComponent({
 </script>
 
 <style>
-  ion-searchbar {
-    --border-radius: 20px;
+  .header{
+    background: #1B4C81;
   }
   .inputList{
     --padding-end: #5277B1;
@@ -106,13 +96,12 @@ export default defineComponent({
     --border-color: #6A467F;
   }
   .save{
-    bottom: 128px;
-    text-align: center;
-    position: absolute;
+    bottom: 60px;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     --border-radius: 20px;
     --background: #6A467F;
-    --border-width: 2px;
-    font-size: 16px;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
   }
 </style>

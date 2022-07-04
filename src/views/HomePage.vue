@@ -1,22 +1,25 @@
 <template>
   <ion-app>
     <ion-content>
-      <ion-title>Bem-vindo(a) ao iBuy</ion-title>
-      <p>Um novo jeito de fazer suas compras</p>
-      <ion-button
-        router-link="/login"
-        color="light"
-        size="default"
-        expand="block"
-        fill="solid"
-        >Prosseguir</ion-button
-      >
+      <div class="content">
+        <ion-title>Bem-vindo(a) ao iBuy</ion-title>
+        <p>Um novo jeito de fazer suas compras</p>
+        <ion-img src="../../public/assets/iBuyLogo.png"></ion-img>
+        <ion-button class="next" router-link="/login">Prosseguir</ion-button>
+      </div>
     </ion-content>
   </ion-app>
 </template>
 
 <script>
-import { IonApp, IonHeader, IonTitle, IonToolbar, IonButton } from "@ionic/vue";
+import {
+  IonApp,
+  IonHeader,
+  IonTitle,
+  IonToolbar,
+  IonButton,
+  IonImg,
+} from "@ionic/vue";
 import { defineComponent } from "vue";
 
 export default defineComponent({
@@ -27,6 +30,22 @@ export default defineComponent({
     IonTitle,
     IonToolbar,
     IonButton,
+    IonImg,
   },
 });
 </script>
+
+<style>
+.next {
+  bottom: 60px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  --border-radius: 20px;
+  --background: #6a467f;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+}
+.content {
+
+}
+</style>
