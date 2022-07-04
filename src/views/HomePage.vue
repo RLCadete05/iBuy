@@ -4,7 +4,7 @@
       <div class="content">
         <ion-title>Bem-vindo(a) ao iBuy</ion-title>
         <p>Um novo jeito de fazer suas compras</p>
-        <ion-img src="../../public/assets/iBuyLogo.png"></ion-img>
+        <ion-img :src="require('../../public/assets/iBuyLogo.png')"></ion-img>
         <ion-button class="next" router-link="/login">Prosseguir</ion-button>
       </div>
     </ion-content>
@@ -32,6 +32,7 @@ export default defineComponent({
     IonButton,
     IonImg,
   },
+  
 });
 </script>
 
@@ -45,7 +46,21 @@ export default defineComponent({
   display: flex;
   justify-content: center;
 }
-.content {
-
+p{
+  font-family: 'Raleway', sans-serif;
+  color: #002554;
 }
+.content{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+  padding: 10px;
+  text-align: center;
+}
+ion-app{
+  display: flex;
+  align-content: center;
+}
+
 </style>

@@ -50,6 +50,8 @@ export default defineComponent({
 </script>
 
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500;600&display=swap');
+
 .background {
   --background: #ffffff url("../../public/assets/borders.png") no-repeat center
     center / cover !important;
@@ -65,5 +67,9 @@ export default defineComponent({
   --border-color: #1b4c81;
   --border-width: 2px;
   font-size: 16px;
+}
+ion-title{
+  font-family: 'Raleway', sans-serif;
+  color: #002554;
 }
 </style>

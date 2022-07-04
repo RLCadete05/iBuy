@@ -26,7 +26,9 @@
             <ion-label>{{ item }}</ion-label>
           </ion-item>
         </ion-list>
-        <ion-button class="save">Salvar</ion-button>
+        <ion-button class="button-insert">Salvar</ion-button><br/>
+        <ion-button class="button-insert">Fotografar lista</ion-button>
+
       </div>
     </ion-content>
   </ion-app>
@@ -95,7 +97,7 @@ export default defineComponent({
     --background-checked: #6A467F;
     --border-color: #6A467F;
   }
-  .save{
+  .button-insert{
     bottom: 60px;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     --border-radius: 20px;
