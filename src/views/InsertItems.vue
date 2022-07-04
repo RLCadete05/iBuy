@@ -25,9 +25,9 @@
             <ion-checkbox class="check" checked="true"></ion-checkbox>
             <ion-label>{{ item }}</ion-label>
           </ion-item>
-        </ion-list>
+        </ion-list><br/>
         <ion-button class="button-insert">Salvar</ion-button><br/>
-        <ion-button class="button-insert">Fotografar lista</ion-button>
+        <ion-button class="button-insert" href="/usephotogallery">Fotografar lista</ion-button>
 
       </div>
     </ion-content>
@@ -40,7 +40,6 @@ import {
   IonHeader,
   IonToolbar,
   IonContent,
-  IonIcon,
   IonItem,
   IonButton,
   IonInput,
@@ -56,7 +55,6 @@ export default defineComponent({
     IonHeader,
     IonToolbar,
     IonContent,
-    IonIcon,
     IonItem,
     IonButton,
     IonInput,

@@ -14,9 +14,7 @@
 <script>
 import {
   IonApp,
-  IonHeader,
   IonTitle,
-  IonToolbar,
   IonButton,
   IonImg,
 } from "@ionic/vue";
@@ -26,9 +24,7 @@ export default defineComponent({
   name: "HomePage",
   components: {
     IonApp,
-    IonHeader,
     IonTitle,
-    IonToolbar,
     IonButton,
     IonImg,
   },

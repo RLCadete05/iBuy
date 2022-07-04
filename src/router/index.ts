@@ -3,6 +3,7 @@ import { RouteRecordRaw } from 'vue-router';
 import HomePage from '../views/HomePage.vue'
 import InsertItems from '../views/InsertItems.vue'
 import LoginPage from '../views/LoginPage.vue'
+import usePhotoGallery from '../views/photoGallery.vue'
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -23,6 +24,11 @@ const routes: Array<RouteRecordRaw> = [
     path: '/insertitems',
     name: 'InsertItems',
     component: InsertItems,
+  },
+  {
+    path: '/usephotogallery',
+    name: 'usePhotoGallery',
+    component: usePhotoGallery,
   },
 ]
 
