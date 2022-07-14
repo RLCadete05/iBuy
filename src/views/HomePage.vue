@@ -57,6 +57,8 @@ p{
   flex-direction: column;
   padding: 10px;
   text-align: center;
+  position: absolute;
+  top: 100px;
 }
 ion-app{
   display: flex;
