@@ -2,7 +2,7 @@
   <ion-app>
     <ion-header translucent>
       <ion-toolbar class="header">
-        <ion-title>iBuy</ion-title>
+        <ion-icon name="arrow-back-outline"></ion-icon>
       </ion-toolbar>
     </ion-header>
 
